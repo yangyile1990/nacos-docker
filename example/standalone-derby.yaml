@@ -42,3 +42,5 @@ services:
 networks:
   nacos_custom_network:
     driver: bridge
+    # noinspection ComposeUnknownKeys
+    name: nacos_custom_network
