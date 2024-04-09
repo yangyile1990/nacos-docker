@@ -1,4 +1,5 @@
-version: "2"
+version: "3.7"
+
 services:
   nacos:
     image: nacos/nacos-server:${NACOS_VERSION}
@@ -42,5 +43,4 @@ services:
 networks:
   nacos_custom_network:
     driver: bridge
-    # noinspection ComposeUnknownKeys
     name: nacos_custom_network
