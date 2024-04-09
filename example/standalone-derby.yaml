@@ -19,7 +19,7 @@ services:
       - nacos_custom_network
 
   prometheus:
-    container_name: nacos-prometheus49090
+    container_name: nacos-prometheus-49090
     image: prom/prometheus:latest
     volumes:
       - ./prometheus/prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
@@ -32,7 +32,7 @@ services:
       - nacos_custom_network
 
   grafana:
-    container_name: nacos-grafana43000
+    container_name: nacos-grafana-43000
     image: grafana/grafana:latest
     ports:
       - 43000:3000
