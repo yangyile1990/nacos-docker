@@ -20,7 +20,7 @@ services:
     volumes:
       - ./prometheus/prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
     ports:
-      - "9090:9090"
+      - "49090:9090"
     depends_on:
       - nacos
     restart: on-failure
@@ -28,5 +28,5 @@ services:
     container_name: grafana
     image: grafana/grafana:latest
     ports:
-      - 3000:3000
+      - 43000:3000
     restart: on-failure
