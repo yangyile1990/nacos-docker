@@ -14,6 +14,9 @@ services:
     ports:
       - "8848:8848"
       - "9848:9848"
+    networks:
+      - nacos_custom_network
+
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
@@ -24,9 +27,18 @@ services:
     depends_on:
       - nacos
     restart: on-failure
+    networks:
+      - nacos_custom_network
+
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
     ports:
       - 43000:3000
     restart: on-failure
+    networks:
+      - nacos_custom_network
+
+networks:
+  nacos_custom_network:
+    driver: bridge
